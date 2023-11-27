@@ -75,7 +75,7 @@
 
     }
 
-    //MAL
+    //MAL   
     const getPayAmount1 = ({ isDead = false, isSeparated = true, isRetired = false }) => {
         let result;
         if ( isDead ) {
