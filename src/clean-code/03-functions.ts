@@ -101,7 +101,7 @@
 
         if (isDead) return 1500;
         if (isSeparated) return 2500;
-        return isRetired ? 3000 : 4000;
+        return ( isRetired ) ? 3000 : 4000;
     }
 
 })();
