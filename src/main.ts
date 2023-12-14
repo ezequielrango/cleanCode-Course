@@ -4,7 +4,8 @@ import './clean-code/05-dry'
 import './clean-code/06-classes-a'
 import './clean-code/06-classes-b'
 import './clean-code//07-homework'
-
+import './code-smells/01-singleton'
+import './code-smells/02-low-coupling'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
@@ -13,3 +14,4 @@ app.innerHTML = `
   <span>Revisar la consola de JavaScript</span>
 `
 
+ 
