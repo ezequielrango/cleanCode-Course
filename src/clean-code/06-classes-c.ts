@@ -24,13 +24,11 @@
     }
 
     interface UserProps {
-        birthdate  : Date,
         email      : string,
-        gender     : Gender,
-        name       : string,
         role       : string,
     }
 
+    
 
     class User {
 
@@ -53,6 +51,12 @@
     }
 
 
+    interface SettingsProps {
+        lastOpenFolder: string;
+        workingDirectory: string;
+    }
+
+
     interface UserSettingsProps {
         birthdate: Date;
         email: string;
@@ -63,25 +67,36 @@
         workingDirectory: string;
     }
 
-    class UserSettings extends User {
+    class Settings {
 
         public workingDirectory : string;
         public lastOpenFolder   : string;
         constructor({
             workingDirectory,
             lastOpenFolder,
-            email,
-            role,
-            name,
-            gender,
-            birthdate,
-        }: UserSettingsProps ) {
-            super({email, role, name, gender, birthdate});
+        }: SettingsProps ) {
             this.workingDirectory = workingDirectory;
             this.lastOpenFolder = lastOpenFolder;
         }
     }
 
+
+    class UserSettings {
+
+        public person: PersonProps;
+        public user: User;
+        public settings: Settings;
+
+        constructor({
+            name, gender, birthdate,
+            email, role,
+            lastOpenFolder, workingDirectory
+        }: UserSettingsProps){
+            this.person = new Person({name, gender, birthdate });
+            this.user = new User({ email, role });
+            this.settings = new Settings({ lastOpenFolder, workingDirectory })
+        }
+    }
 
     const userSettings = new UserSettings({
         birthdate: new Date('1999-09-03'),
