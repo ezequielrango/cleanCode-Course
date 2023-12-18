@@ -21,8 +21,8 @@ export class Audi extends Vehicle {
         super();
     }
 
-    getNumbersOfSeats(): number {
-        throw new Error("Method not implemented.");
+    getNumbersOfSeats() {
+        return this.numberOfSeats;
     }
 }
 
@@ -32,8 +32,8 @@ export class Toyota extends Vehicle {
         super();
     }
 
-    getNumbersOfSeats(): number {
-        throw new Error("Method not implemented.");
+    getNumbersOfSeats() {
+        return this.numberOfSeats;
     }
 }
 
@@ -43,8 +43,8 @@ export class Honda extends Vehicle {
         super();
     }
     
-    getNumbersOfSeats(): number {
-        throw new Error("Method not implemented.");
+    getNumbersOfSeats() {
+        return this.numberOfSeats;
     }
 
 
