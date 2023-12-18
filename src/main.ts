@@ -8,6 +8,7 @@ import './code-smells/01-singleton'
 import './code-smells/02-low-coupling'
 import './solid/014-srp'
 import './solid/02-open-close-a'
+import './solid/03-liskov-a'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 
